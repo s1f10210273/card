@@ -1,4 +1,3 @@
-"use strict";
 
 const BLACK = 1,
     WHITE = -1;
@@ -258,33 +257,33 @@ function showAnime() {
 }
 
 
- // カウントダウン関数
- function countdown(seconds) {
-    var timer = setInterval(function() {
-      var progress = document.querySelector('.progress');
-      progress.style.animationPlayState = "running";
-      
-      var minutes = Math.floor(seconds / 60);
-      var remainingSeconds = seconds % 60;
-      document.getElementById("countdownTimer").innerHTML = ( '00' + minutes ).slice( -2 ) + ":" + ( '00' + remainingSeconds ).slice( -2 );
-      
-      seconds--;
-      
-      if (seconds < 0) {
-        clearInterval(timer);
-        progress.style.animationPlayState = "paused";
-        document.getElementById("countdownTimer").innerHTML = "終了";
-      }
-    }, 1000);
-  }
-  
-  // ページがロードされたときの処理
-  window.onload = function() {
-    countdown(180);
-  }
+// カウントダウン関数
+function countdown(seconds) {
+    var timer = setInterval(function () {
+        var progress = document.querySelector('.progress');
+        progress.style.animationPlayState = "running";
 
-  function addBlackout() {
+        var minutes = Math.floor(seconds / 60);
+        var remainingSeconds = seconds % 60;
+        document.getElementById("countdownTimer").innerHTML = ('00' + minutes).slice(-2) + ":" + ('00' + remainingSeconds).slice(-2);
+
+        seconds--;
+
+        if (seconds < 0) {
+            clearInterval(timer);
+            progress.style.animationPlayState = "paused";
+            document.getElementById("countdownTimer").innerHTML = "終了";
+        }
+    }, 1000);
+}
+
+// ページがロードされたときの処理
+window.onload = function () {
+    countdown(180);
+}
+
+function addBlackout() {
     var blackout = document.createElement("div");
     blackout.id = "blackout";
     document.body.appendChild(blackout);
-  }
+}
