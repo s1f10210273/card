@@ -15,6 +15,11 @@
 </head>
 
 <body>
+    <div class="bar">
+        <div class="progress"></div>
+      </div>
+      
+      <h1><div id="countdownTimer">スタート</div></h1>
     <main>
         <div id="modal">
             <h3>オセロ</h2>
@@ -36,6 +41,8 @@
             <div id="numWhite"></div>
         </div>
     </main>
+    <div style ="text-align: center;">
+    <button type="button" class="btn btn-success" onclick="addBlackout()" style="margin-top: 5px;">終わる</button></div>
 
     <script src="main.js"></script>
 </body>

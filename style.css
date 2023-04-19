@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background-color: #4CAF50;
 }
 
 main {
@@ -141,3 +142,32 @@ h2 {
 .hide {
     display: none;
 }
+
+.bar {
+    width: 100%;
+    height: 20px;
+    background-color: #4e4e4e;
+    margin-bottom: 10px;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+    animation: countdown 180s linear;
+  }
+  
+  @keyframes countdown {
+    from { width: 100%; }
+    to { width: 0%; }
+  }
+
+  #blackout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+  }
